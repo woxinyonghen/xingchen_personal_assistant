@@ -23,7 +23,7 @@ from openxlab.model import download
 
 
 download(model_repo='星辰/xing_chen_personal_assistant', output='xingchen')
-download(model_repo='OpenLMLab/InternLM-chat-7b-8k', output='internlm')
+# download(model_repo='OpenLMLab/InternLM-chat-7b-8k', output='internlm')
 
 def on_btn_click():
     del st.session_state.messages
@@ -43,7 +43,7 @@ def load_model(model_dir):
 def prepare_generation_config():
     model_choose = ''
     with st.sidebar:
-        model_choose = st.radio("Model Choose", ("xingchen", "internlm"))
+        # model_choose = st.radio("Model Choose", ("xingchen", "internlm"))
         max_length = st.slider("Max Length", min_value=32, max_value=2048, value=2048)
         top_p = st.slider("Top P", 0.0, 1.0, 0.8, step=0.01)
         temperature = st.slider("Temperature", 0.0, 1.0, 0.7, step=0.01)
@@ -85,10 +85,10 @@ def main():
 
     # torch.cuda.empty_cache()
     print("load model begin.")
-    if model_choose == 'internlm':
-        model, tokenizer = load_model('internlm')
-    else:
-        model, tokenizer = load_model('xingchen')
+    # if model_choose == 'internlm':
+    #     model, tokenizer = load_model('internlm')
+    # else:
+    model, tokenizer = load_model('xingchen')
     print("load model end.")
 
 
