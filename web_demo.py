@@ -22,7 +22,8 @@ from openxlab.model import download
 from openxlab.model import download
 
 
-download(model_repo='星辰/xing_chen_personal_assistant', output='xingchen')
+# download(model_repo='星辰/xing_chen_personal_assistant', output='xingchen')
+download(model_repo='星辰/The_History', output='xingchen')
 # download(model_repo='OpenLMLab/InternLM-chat-7b-8k', output='internlm')
 
 def on_btn_click():
